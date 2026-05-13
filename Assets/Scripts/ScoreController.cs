@@ -8,31 +8,34 @@ public class ScoreController : MonoBehaviour
 
     private void Start()
     {
+
         LoadScore();
+        LoadUiScore();
     }
-    void OnTestE()
-    {
-     AddScore();
-     }
-    void OnTestQ()
-    {
-     SubstartScore();
-    }
-    
-    private void AddScore()
+
+
+    public void AddScore(int score)
     {
 
-        currScore++;
+        currScore = currScore + score;
         LoadUiScore();
+        SaveScore();
     }
-    private void SubstartScore()
+    public void SubstartScore(int score)
     {
-        currScore--;
+        currScore = currScore - score;
         LoadUiScore();
+        SaveScore();
     }
     private void LoadScore()
     {
         Debug.Log("Se carga el puntaje guardado");
+        currScore = PlayerPrefs.GetInt("score");
+    }
+    private void SaveScore()
+    {
+        Debug.Log("Se guarda el puntaje");
+        PlayerPrefs.SetInt("score", currScore);
 
     }
     private void LoadUiScore()
@@ -41,4 +44,5 @@ public class ScoreController : MonoBehaviour
         scoreText.text = currScore.ToString();
 
     }
+
 }
