@@ -966,9 +966,9 @@ GameObject:
   - component: {fileID: 702541283}
   - component: {fileID: 702541282}
   - component: {fileID: 702541281}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Ground
-  m_TagString: isGround
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3216,8 +3216,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4101270251054629287, guid: ef3a3b39228447f4998af07188c72d3e, type: 3}
+      propertyPath: isGround
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4101270251054629287, guid: ef3a3b39228447f4998af07188c72d3e, type: 3}
       propertyPath: jumpForce
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6240075258105155183, guid: ef3a3b39228447f4998af07188c72d3e, type: 3}
       propertyPath: m_Name

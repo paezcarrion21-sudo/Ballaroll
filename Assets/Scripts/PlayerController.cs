@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
         if (collision.transform.CompareTag("Ground"))
         {
             isGround = true;
+
         }
     }
 
@@ -43,16 +44,14 @@ public class PlayerController : MonoBehaviour
         if (collision.transform.CompareTag("Ground"))
         {
             isGround = false;
+
         }
     }
 
 
     void OnJump()
     {
-
         isJumping = true;
-
-
     }
     #endregion
     void FixedUpdate()
@@ -68,13 +67,11 @@ public class PlayerController : MonoBehaviour
         Vector3 movementDirection = (cameraForward * my) + (cameraRight * mx);
         rb.AddForce(movementDirection * speed);
 
-        if (isJumping == true)
+        if (isJumping == true && isGround)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isJumping = false;
         }
-
-
 
     }
 
