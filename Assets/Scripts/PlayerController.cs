@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [HideInInspector] public float mx;
     [HideInInspector] public float my;
-    private Rigidbody rb;
+    public Rigidbody rb;
     [SerializeField] private float speed = 10f;
     private Camera playerCamera;
     [SerializeField] private float jumpForce;
@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     {
 
     }
+
     #region entradasteclado
     void OnMove(InputValue movementvalue)
     {
@@ -50,8 +51,12 @@ public class PlayerController : MonoBehaviour
 
 
     void OnJump()
+
     {
-        isJumping = true;
+        if (isGround)
+        {
+            isJumping = true;
+        }
     }
     #endregion
     void FixedUpdate()
