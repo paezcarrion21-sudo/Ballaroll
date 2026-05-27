@@ -33,8 +33,8 @@ public class GameManager : MonoBehaviour
     {
         Player.SetActive(false);
         Player.transform.position = CurrSpawnPlayer;
+        Player.SetActive(true);
         Player.GetComponent<PlayerController>().rb.angularVelocity = Vector3.zero;
         Player.GetComponent<PlayerController>().rb.linearVelocity = Vector3.zero;
-        Player.SetActive(true);
     }
 }

@@ -9,6 +9,7 @@ public class ScoreController : MonoBehaviour
     private void Start()
     {
 
+
         LoadScore();
         LoadUiScore();
     }
