@@ -603,6 +603,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3132480539301126710, guid: 0d9ec2fd59ddd4945a1ba8feb2a05d24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772299764681333697, guid: 0d9ec2fd59ddd4945a1ba8feb2a05d24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20.13
+      objectReference: {fileID: 0}
     - target: {fileID: 9120734031723404958, guid: 0d9ec2fd59ddd4945a1ba8feb2a05d24, type: 3}
       propertyPath: m_Name
       value: Obstacle (1)
