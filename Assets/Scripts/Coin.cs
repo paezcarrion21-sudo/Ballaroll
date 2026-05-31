@@ -17,6 +17,7 @@ public class Coin : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log("Esta en el trigger");
+            Destroy(gameObject);
 
         }
     }
