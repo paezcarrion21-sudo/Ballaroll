@@ -9,7 +9,7 @@ public class ScoreController : MonoBehaviour
     private void Start()
     {
 
-
+        PlayerPrefs.DeleteKey("score");
         LoadScore();
         LoadUiScore();
     }
